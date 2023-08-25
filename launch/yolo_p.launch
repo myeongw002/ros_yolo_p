@@ -1,0 +1,16 @@
+<launch>
+  <arg name="weights" default="$(find yolo_p)/src/weights/End-to-end.pth"/>
+  <arg name="image_topic" default='/zed/zed_node/rgb/image_rect_color/compressed'/>
+  <arg name="image_size" default="640"/>
+  
+  
+  <node pkg="yolo_p" type="demo2.py" name="yolo_p">
+  <param name="weights" value="$(arg weights)"/>
+  <param name="image_topic" value="$(arg image_topic)"/>
+  <param name="image_size" value="$(arg imag_size)"/>
+  </node>
+
+
+
+
+</launch>
