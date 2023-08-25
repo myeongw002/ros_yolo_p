@@ -37,9 +37,10 @@ class Yolo_P:
                 transforms.ToTensor(),
                 self.normalize,
             ])
-        self.ros_topic_func()    
+    
         self.init_detector()
-        self.bridge = CvBridge() 
+        self.bridge = CvBridge()     
+        self.ros_topic_func()        
         
         
         
